@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NECTAR HUB- Home</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>NECTAR HUB </h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="watch.html">Watch</a>
+      <a href="premium.html">Premium</a>
+      <a href="event.html">Event</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+
+    <h2>Welcome to NECTAR HUB </h2>
+    <p>Watch exclusive Models videos for free.</p>
+    <a class="explore-btn" href="watch.html">Explore Now 🔥</a>
+
+  </main>
+
+ <footer>© 2025 NECTAR HUB </footer>
+
+<!-- Age Verification Overlay -->
+<div id="age-verification" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000000ee;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10000;display:none;">
+  <h2>Are you 18 or older?</h2>
+  <button onclick="enterSite()">Yes, Enter</button>
+  <button onclick="exitSite()">No, Exit</button>
+</div>
+
+<script>
+  function enterSite() {
+    localStorage.setItem('ageVerified', 'true');
+    document.getElementById('age-verification').style.display = 'none';
+  }
+
+  function exitSite() {
+    window.location.href = 'https://google.com';
+  }
+
+  window.onload = function() {
+    if (!localStorage.getItem('ageVerified')) {
+      document.getElementById('age-verification').style.display = 'flex';
+    }
+  };
+</script>
+
+
+</body>
+</html>
